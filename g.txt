@@ -1,0 +1,23 @@
+g.To display all executable files, directories and zero sized files in current directory.
+Script:
+choice=y
+until [ $choice = n ]
+do
+clear
+echo "Menu"
+echo “a. Display All executable files.”
+echo “b. Display all directories.”
+echo “c. Display All zero size files.”
+echo “d. Exit”
+read ch
+case $ch in
+a) find `pwd` -exexcutable ;;
+b) ls -d */ ;;
+c) find `pwd` -type f -size 0 ;;
+d) exit 1 ;;
+*) echo “Incorrect Choice, try again!”
+;;
+esac
+echo “Do you Want to continue?”
+read choice
+done
