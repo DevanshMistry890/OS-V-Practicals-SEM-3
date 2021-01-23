@@ -1,0 +1,18 @@
+# To validate entered date for format(dd-mmm-yyyy)
+# Script:
+
+isValidDate() {
+local d="$1"
+date "+%Y-%m-%d" -d "$d" > /dev/null 2>&1
+if [ $? != 0 ]
+then
+	echo "Date is not valid"
+	exit 1
+else
+	echo “Date is Valid”
+fi
+}
+echo "Enter Date to be checked:"
+read dmy
+ymd=$(echo "$dmy" | awk -F- '{ OFS=FS; print $3,$2,$1 }')
+isValidDate "$ymd"
