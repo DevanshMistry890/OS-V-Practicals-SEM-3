@@ -1,0 +1,28 @@
+# To accept a number n and display first n prime numbers.
+# Script:
+echo "Enter number of Prime Numbers required:"
+read n
+x=3
+y=25000
+m=2
+echo -e "\nFirst $n Prime Numbers:"
+echo "2"
+while [[ $m -le $n ]]
+do
+    let LIMIT=$x-1
+    for ((a=2; a <= LIMIT ; a++))
+        do
+        let check=$x%$a
+        if [[ $check -eq 0 ]]
+        then
+        #echo "$x is not prime"
+        break
+        fi
+    done
+    if [[ $a -gt $LIMIT ]]
+    then
+    echo "$x"
+    let m=$m+1
+    fi
+    let x=$x+1
+done
