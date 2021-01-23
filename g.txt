@@ -1,5 +1,5 @@
-g.To display all executable files, directories and zero sized files in current directory.
-Script:
+//To display all executable files, directories and zero sized files in current directory.
+//Script:
 choice=y
 until [ $choice = n ]
 do
