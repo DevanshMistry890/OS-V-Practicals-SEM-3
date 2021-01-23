@@ -1,0 +1,11 @@
+# To check whether the entered number is odd or even.
+# Script:
+echo "Enter Number" 
+read num1
+rem= $num1%2
+if [ $rem == 0 ]
+then
+	echo “$num1 is even”
+else 
+	echo “$num1 is odd”
+fi
