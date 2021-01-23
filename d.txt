@@ -1,0 +1,33 @@
+/* d.	To display menu and execute the given task.  
+MENU
+•	Display calendar of current month.
+•	Display today’s date and time.
+•	Display your name at given x, y position.
+•	Display your terminal number.
+*/
+# Script:
+
+choice=y
+until [ $choice = n ]
+do
+clear
+echo "Menu"
+echo “a. Display calendar of current month.”
+echo “b. Display today’s date and time.”
+echo “c. Display your name at given x, y position.”
+echo “d. Display your terminal number.”
+echo “e. Exit”
+read ch
+case $ch in
+a)	cal ;;
+b)	date ;;
+c)	;;
+d)	echo Your Terminal number
+echo $$ ;;
+e)	exit ;;
+*) echo “Incorrect Choice, try again!”
+;;
+esac
+echo “Do you Want to continue?”
+read choice
+done
