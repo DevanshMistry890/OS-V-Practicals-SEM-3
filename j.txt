@@ -1,0 +1,11 @@
+# To read name of the student. Find the length of name. Print the message “too long” if the length of student name is greater than 10 characters.
+# Script:
+echo “Enter Name”
+read name
+len=${#name}
+if [ $len -gt 10 ]
+then
+	echo This name is too long!
+else
+	echo $name has $len length.
+fi
