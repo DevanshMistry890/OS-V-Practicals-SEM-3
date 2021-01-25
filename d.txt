@@ -21,7 +21,7 @@ read ch
 case $ch in
 a)	cal ;;
 b)	date ;;
-c)	;;
+c)	bash pos.sh ;;
 d)	echo Your Terminal number
 echo $$ ;;
 e)	exit ;;
@@ -31,3 +31,21 @@ esac
 echo “Do you Want to continue?”
 read choice
 done
+
+/* pos.sh*/
+echo Enter Name to be printed:
+read name
+echo Enter X position:
+read x
+echo Enter Y position:
+read y
+clear
+for((i=1;i<y;i++))
+do
+	printf “%s\n”
+done
+for((i=1;i<x;i++))
+do
+	printf “%s ”
+done
+echo “$name”
